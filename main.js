@@ -2,25 +2,21 @@ const taskList = [];
 const taskAddTaskForm = document.querySelector('.todo__add-task-from');
 const todo__input = document.querySelector('.todo__input');
 
-function submitTask(){
+function addTask() {
     let inputValue = todo__input.value;
-    addNewTask(inputValue);
     insertTaskOnHTML(inputValue);
-}
-
-function addNewTask(task) {
-    taskList.push(task);
+    taskList.push(inputValue);
 }
 
 function deleteTask(task){
-
+    task.parentElement.remove();
 }
 
 function insertTaskOnHTML(text){
     taskAddTaskForm.insertAdjacentHTML('afterend',
-        '<form action="" class="todo__task-form">\n' +
+        '<div class="todo__task-form">\n' +
         '        <input class="todo__input-radio" type="radio">\n' +
         `        <p class="todo__task-text">${text}</p>\n` +
-        '        <span class="close-button"></span>\n' +
-        '    </form>');
+        '        <span onclick="deleteTask(this)" class="close-button" >\n' +
+        '    </div>');
 }
