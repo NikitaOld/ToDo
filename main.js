@@ -1,13 +1,12 @@
 const taskList = [];
 const taskAddTaskForm = document.querySelector('.todo__add-task-from');
 const todo__input = document.querySelector('.todo__input');
-todo__input.addEventListener('keyup', (e) => {
-    if (e.key === 'Enter'){
-        let inputValue = todo__input.value;
-        addNewTask(inputValue);
-        insertTaskOnHTML(inputValue);
-    }
-});
+
+function submitTask(){
+    let inputValue = todo__input.value;
+    addNewTask(inputValue);
+    insertTaskOnHTML(inputValue);
+}
 
 function addNewTask(task) {
     taskList.push(task);
