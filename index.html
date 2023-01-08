@@ -8,15 +8,24 @@
     <link rel="stylesheet" href="style.css">
     <title>ToDo</title>
 </head>
+
 <body>
-<div class="todo">
+
+<div id="todo" class="todo">
     <h2 class="todo__priority">HIGH</h2>
-    <form onsubmit="addTask();return false" class="todo__add-task-from">
-        <input class="todo__input" type="text" placeholder="Добавить задачу">
+    <form id="todo-form" class="todo__form">
+        <input id="todo-input" class="todo__input" type="text" placeholder="Добавить задачу">
         <input class="plus-icon" type="image">
     </form>
+
+    <div class="todo__task-item">
+<!--        <input class="todo__input-radio" type="radio">-->
+<!--        <textarea class="todo__task-text"></textarea>-->
+<!--        <button class="close-button"></button>-->
+    </div>
 </div>
 
 <script src="main.js"></script>
 </body>
+
 </html>

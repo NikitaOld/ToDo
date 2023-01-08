@@ -12,11 +12,12 @@
     box-sizing: border-box;
 }
 
-input[type="text"] {
+input{
     font-family: inherit; /* 1 */
     font-size: inherit; /* 1 */
     line-height: inherit; /* 1 */
     margin: 0; /* 2 */
+    padding: 0 0;
 }
 
 body{
@@ -45,7 +46,7 @@ body{
     margin: 12px 0;
 }
 
-.todo__add-task-from{
+.todo__form{
     position: relative;
     display: flex;
     align-items: center;
@@ -88,7 +89,7 @@ body{
     cursor: pointer;
 }
 
-.todo__task-form{
+.todo__task-item{
     display: flex;
     position: relative;
     justify-content: center;
@@ -122,10 +123,13 @@ body{
 }
 
 .close-button{
-    content: url("./img/close-icon.svg");
+    background: url("./img/close-icon.svg") no-repeat center;
+    border: none;
     position: absolute;
-    right: 12px;
-    top: 12px;
+    height: 13px;
+    width: 13px;
+    right: 13px;
+    top: 13px;
 }
 .close-button:hover{
     cursor: pointer;
